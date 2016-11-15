@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Http } from "@angular/http";
 import 'rxjs/add/operator/map';
+import { WordsService } from '../../services/words.service';
 
 @Component({
     selector: 'my-words',
@@ -11,9 +12,10 @@ export class WordsComponent {
     name: string = "Words page";
     users: {};
 
-    constructor(http: Http) {
-        http.get("/api/words")
-            .map(data => data.json())
-            .subscribe((data) => this.words = data);
-    }
+    constructor(private wordsService: WordsService) {
+    this.wordsService.getWords()
+        .subscribe(words => {
+          this.words = words;
+        });
+  }
 }
