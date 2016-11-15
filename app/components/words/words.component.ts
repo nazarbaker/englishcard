@@ -21,17 +21,30 @@ export class WordsComponent {
         });
     }
     addWords(event) {
-    event.preventDefault();
-    const newWords = {
-      english: this.english,
-      ukrainian: this.ukrainian
-    };
+      event.preventDefault();
+      const newWords = {
+        english: this.english,
+        ukrainian: this.ukrainian
+      };
 
-    this.wordsService.addWords(newWords)
-      .subscribe(words => {
-        this.words.push(words);
-        this.english = '';
-        this.ukrainian = '';
+      this.wordsService.addWords(newWords)
+        .subscribe(words => {
+          this.words.push(words);
+          this.english = '';
+          this.ukrainian = '';
+        });
+    }
+    deleteWords(id) {
+      const words = this.words;
+
+      this.wordsService.deleteWords(id).subscribe(data => {
+        if (data.n === 1) {
+          for (let i = 0; i < words.length; i++) {
+            if (words[i]._id === id) {
+              words.splice(i, 1);
+            }
+          }
+        }
       });
     }
 }
