@@ -1,5 +1,15 @@
 <h2>Page: {{name}}</h2>
 
-<pre>Response from server: /users</pre>
-<pre>{{ users?.name }}</pre>
-<pre>{{ users?.last }}</pre>
+<div class="task-list row">
+  <div *ngFor="let word of words" class="row">
+    <div class="col-md-4">
+      {{ word.english }}
+    </div>
+    <div class="col-md-4">
+      {{ word.ukrainian }}
+    </div>
+    <div class="col-md-4">
+      <input type="button" (click)="deleteWords(word._id)" value="Delete" class="btn btn-danger">
+    </div>
+  </div>
+</div>

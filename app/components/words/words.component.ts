@@ -12,8 +12,8 @@ export class WordsComponent {
     users: {};
 
     constructor(http: Http) {
-        http.get("/users")
+        http.get("/api/words")
             .map(data => data.json())
-            .subscribe((data) => this.users = data);
+            .subscribe((data) => this.words = data);
     }
 }
