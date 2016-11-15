@@ -9,14 +9,14 @@
 </form>
 
 <div>
-  <div *ngFor="let word of words" class="">
-    <div class="">
+  <div *ngFor="let word of words" class="row">
+    <div class="column">
       {{ word.english }}
     </div>
-    <div class="">
+    <div class="column">
       {{ word.ukrainian }}
     </div>
-    <div class="">
+    <div>
       <input type="button" (click)="deleteWords(word._id)" value="Delete">
     </div>
   </div>

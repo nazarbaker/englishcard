@@ -9,13 +9,16 @@ import { Component } from '@angular/core';
 }
 `],
     template: `
-<h1>My First {{name}} app</h1>
-<router-outlet></router-outlet>
+    <div class="wrapper">
+      <h1>{{name}}</h1>
+      <a [routerLink]="['/']">Words</a> | <a [routerLink]="['/cards/']">Cards</a>
+      <hr />
+      <router-outlet></router-outlet>
+    </div>`,
 
-<a [routerLink]="['/']">Words</a> | <a [routerLink]="['/cards/']">Cards</a>`,
 })
 export class AppComponent {
-    name: string = "Angular 2 on Express";
+    name: string = "Flashcards";
 
     constructor() {}
 }
