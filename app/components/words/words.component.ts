@@ -10,12 +10,28 @@ import { WordsService } from '../../services/words.service';
 })
 export class WordsComponent {
     name: string = "Words page";
-    users: {};
+    english: string;
+    ukrainian: string;
+    _id: string;
 
     constructor(private wordsService: WordsService) {
     this.wordsService.getWords()
         .subscribe(words => {
           this.words = words;
         });
-  }
+    }
+    addWords(event) {
+    event.preventDefault();
+    const newWords = {
+      english: this.english,
+      ukrainian: this.ukrainian
+    };
+
+    this.wordsService.addWords(newWords)
+      .subscribe(words => {
+        this.words.push(words);
+        this.english = '';
+        this.ukrainian = '';
+      });
+    }
 }

@@ -13,4 +13,11 @@ export class WordsService {
     return this.http.get('/api/words')
       .map(res => res.json());
   }
+
+  addWords(newWords) {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('/api/words', JSON.stringify(newWords), { headers: headers })
+      .map(res => res.json());
+  }
 }
