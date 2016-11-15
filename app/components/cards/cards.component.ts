@@ -29,14 +29,10 @@ export class CardsComponent implements OnInit {
       });
   }
 
-  nextWords() {
-    this.wordsService.getWords()
-        .subscribe(words => {
-          this.number = Math.floor(Math.random() * words.length)
-          this.words = words
-          this.english = this.words[this.number].english
-          this.ukrainian = this.words[this.number].ukrainian
-        });
+  nextWords(words) {
+    this.number = Math.floor(Math.random() * words.length)
+    this.english = this.words[this.number].english
+    this.ukrainian = this.words[this.number].ukrainian
   }
 
   ngOnInit():any {
