@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 <h1>My First {{name}} app</h1>
 <router-outlet></router-outlet>
 
-<a [routerLink]="['/']">Words</a> | <a [routerLink]="['/cards/', { id: 2 }]">Cards</a>`,
+<a [routerLink]="['/']">Words</a> | <a [routerLink]="['/cards/']">Cards</a>`,
 })
 export class AppComponent {
     name: string = "Angular 2 on Express";
