@@ -4,9 +4,9 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
-import { CardsComponent } from "./components/cards/cards.component";
-import { routing } from "./routes";
-import { WordsComponent } from "./components/words/words.component";
+import { CardsComponent } from './components/cards/cards.component';
+import { routing } from './routes';
+import { WordsComponent } from './components/words/words.component';
 import { WordsService } from './services/words.service';
 
 @NgModule({

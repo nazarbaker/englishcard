@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Http } from "@angular/http";
 import 'rxjs/add/operator/map';
 import { WordsService } from '../../services/words.service';
 
@@ -9,7 +8,7 @@ import { WordsService } from '../../services/words.service';
     styleUrls: ['components/words/words.component.css']
 })
 export class WordsComponent {
-    name: string = "Words page";
+    name: string = 'Words page';
     english: string;
     ukrainian: string;
     _id: string;

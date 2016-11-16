@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ElementRef } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { WordsService } from '../../services/words.service';
 import { Injectable } from '@angular/core';
 import { OnInit } from '@angular/core';
@@ -22,20 +21,20 @@ export class CardsComponent implements OnInit {
   constructor(private _elRef: ElementRef, private wordsService: WordsService) {
     this.wordsService.getWords()
       .subscribe(words => {
-        this.number = Math.floor(Math.random() * words.length)
-        this.words = words
-        this.english = this.words[this.number].english
-        this.ukrainian = this.words[this.number].ukrainian
+        this.number = Math.floor(Math.random() * words.length);
+        this.words = words;
+        this.english = this.words[this.number].english;
+        this.ukrainian = this.words[this.number].ukrainian;
       });
   }
 
   nextWords(words) {
-    this.number = Math.floor(Math.random() * words.length)
-    this.english = this.words[this.number].english
-    this.ukrainian = this.words[this.number].ukrainian
+    this.number = Math.floor(Math.random() * words.length);
+    this.english = this.words[this.number].english;
+    this.ukrainian = this.words[this.number].ukrainian;
   }
 
-  ngOnInit():any {
+  ngOnInit(): any {
     jQuery(this._elRef.nativeElement).find('.flashcard').on('click', function() {
       jQuery('.flashcard').toggleClass('flipped');
     });

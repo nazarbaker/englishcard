@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'my-app',
     styles: [`h1 {
-	color: white;
-	background: darkgray;
-	padding: 20px;
-}
-`],
+        color: white;
+        background: darkgray;
+        padding: 20px;
+    }`],
     template: `
     <div class="wrapper">
       <h1>{{name}}</h1>
@@ -18,7 +17,7 @@ import { Component } from '@angular/core';
 
 })
 export class AppComponent {
-    name: string = "Flashcards";
+    name: string = 'Flashcards';
 
     constructor() {}
 }
