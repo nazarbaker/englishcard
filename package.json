@@ -8,7 +8,8 @@
     "tsc:w": "tsc -w",
     "prod": "NODE_ENV=production ./bin/www",
     "build:prod": "node bin/bundler.js --prod",
-    "postinstall": "npm run build:prod"
+    "postinstall": "npm run build:prod",
+    "lint": "tslint \"./app/**/*.ts\""
   },
   "repository": {
     "url": "https://github.com/vladotesanovic/angular2-express-slim"
@@ -38,13 +39,27 @@
     "systemjs-builder": "^0.15.17",
     "typescript": "^2.0.3",
     "yargs": "^4.7.1",
-    "compression": "^1.6.2",    
+    "compression": "^1.6.2",
     "ejs": "^2.5.2",
     "mongojs": "^2.4.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
     "systemjs": "0.19.39",
-    "concurrently": "^3.0.0"
+    "concurrently": "^3.0.0",
+    "codelyzer": "1.0.0-beta.1",
+    "ts-node": "1.2.1",
+    "tslint": "3.13.0",
+    "@types/jasmine": "^2.2.30",
+    "angular-cli": "1.0.0-beta.19-3",
+    "jasmine-core": "2.4.1",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-remap-istanbul": "^0.2.1",
+    "protractor": "4.0.9",
+    "webdriver-manager": "10.2.5"
   }
 }
