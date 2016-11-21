@@ -9,7 +9,8 @@
     "prod": "NODE_ENV=production ./bin/www",
     "build:prod": "node bin/bundler.js --prod",
     "postinstall": "npm run build:prod",
-    "lint": "tslint \"./app/**/*.ts\""
+    "lint": "tslint \"./app/**/*.ts\"",
+    "test": "ng test"
   },
   "repository": {
     "url": "https://github.com/vladotesanovic/angular2-express-slim"

@@ -8,3 +8,9 @@ public/ng2
 .idea
 *.iml
 *.ipr
+e2e/**/*.js
+e2e/**/*.js.map
+test.js
+test.js.map
+polyfills.js
+polyfills.js.map
