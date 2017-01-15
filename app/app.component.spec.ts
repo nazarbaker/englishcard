@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 describe('App Component', () => {
   beforeEach(() => {
     this.app = new AppComponent();
-  })
+  });
 
   it('should Be Truthy', () => {
     expect(this.app).toBeTruthy();

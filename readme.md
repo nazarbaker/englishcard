@@ -26,4 +26,4 @@ npm run prod
 ### Deploy on heroku:
 [https://englishcard.herokuapp.com] (https://englishcard.herokuapp.com "flashcard")
 
-[![Build Status](https://travis-ci.org/nazarbaker/englishcard.svg?branch=master)](https://travis-ci.org/nazarbaker/englishcard)
+[![Build Status](https://travis-ci.org/nazarbaker/englishcard.svg?branch=feature/travis)](https://travis-ci.org/nazarbaker/englishcard)
